@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+* {
+  margin: 0px;
+}
+
+h1 {
+  font-family: Rubik, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.5rem;
+  line-height: 57px;
+  text-align: center;
+  color: #363636;
+}
+
+h2 {
+  font-family: Rubik, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4rem;
+  line-height: 57px;
+  text-align: center;
+
+  /* identical to box height */
+  text-align: center;
+
+  color: #0085ff;
+}
+
+h3 {
+  font-family: Rubik, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 57px;
+  text-align: left;
+  color: #363636;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+h4 {
+  font-family: Rubik, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+p {
+  font-family: Rubik, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: left;
+  color: #363636;
+  margin-left: 10px;
+  line-height: 20px;
+}
+
+.background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  background: linear-gradient(126.05deg, #3296f3 8.8%, #6a43da 92.58%);
+  mix-blend-mode: normal;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+
+  .window {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    background: white;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+.holder {
+  position: absolute;
+  width: 69vw;
+  height: 88vh;
+  min-width: 500px;
+
+  background: rgba(255, 255, 255, 0.6);
+  mix-blend-mode: normal;
+  box-shadow: 0px 18px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+
+  display: flex;
+}
+
+.player {
+  width: 50%;
+  height: 100%;
+
+  background: rgba(45, 95, 224, 0.3);
+  mix-blend-mode: normal;
+  animation: background 2s;
+}
+
+.player--0 {
+  border-radius: 20px 0px 0px 20px;
+}
+.player--1 {
+  border-radius: 0px 20px 20px 0px;
+}
+
+.player--active {
+  background: RGBA(124, 192, 255, 0.5);
+  mix-blend-mode: normal;
+}
+
+.player--rolledA1 {
+  background: RGBA(255, 10, 10, 1);
+  mix-blend-mode: normal;
+}
+
+.titleHolder {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  mix-blend-mode: normal;
+  margin-top: 11vh;
+  line-height: 21px;
+}
+
+.centralHolder {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  transform: translateX(-17.5vw);
+  z-index: 100;
+}
+
+.newGame {
+  margin-top: 22px;
+  margin-bottom: -80px;
+
+  background: #2e78bd;
+  opacity: 0.8;
+  border-radius: 37px;
+  padding: 15px;
+  z-index: 100;
+}
+
+.rulesButton {
+  background: #2e78bd;
+  opacity: 0.8;
+  border-radius: 37px;
+  padding: 15px;
+  z-index: 100;
+}
+
+.button {
+  &:hover {
+    cursor: pointer;
+    background-color: #1c62a0;
+  }
+}
+
+.resultHolder {
+  margin-top: 6vh;
+  width: 500px;
+  height: 140px;
+  background: #2e78bd;
+  opacity: 0.9;
+  border-radius: 37px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+
+  .winText {
+    color: gold;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+.result {
+  width: 100px;
+  height: 100px;
+  margin-top: 18px;
+  box-shadow: 0px 3px 5px 3px RGBA(0, 0, 0, 0.3);
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.rollOption {
+  margin-top: 5vh;
+  width: 500px;
+  height: 190px;
+  background: #2e78bd;
+  opacity: 0.9;
+  border-radius: 37px;
+  margin-bottom: 20px;
+}
+
+.rollOptionHolder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.rollOptionText {
+  margin-top: 20px;
+}
+
+.rollChoice {
+  height: 100px;
+  width: 100px;
+  background: #f0f0f0;
+  border-radius: 25px;
+
+  margin-top: 20px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 100px;
+  /* identical to box height */
+  text-align: center;
+
+  color: #000000;
+
+  &:hover {
+    box-shadow: inset 2px 2px 2px RGBA(0, 0, 0, 0.3);
+    background-color: RGBA(255, 255, 255, 0.9);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.lives {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 20px;
+    width: 20px;
+    margin: 0px 10px;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}

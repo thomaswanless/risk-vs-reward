@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="holder">
+        <div class="player player--0 player--active">
+          <div class="titleHolder">
+            <h1 class="player0title underline">PLAYER 1</h1>
+            <div class="lives lives0">
+                <img id="P0L1" src="heart.png">
+                <img id="P0L2" src="heart.png">
+                <img id="P0L3" src="heart.png">
+                <img id="P0L4" src="heart.png">
+                <img id="P0L5" src="heart.png">
+            </div>
+            <br />
+            <h2 class="score--0">0</h2>
+          </div>
+        </div>
+        <div class="player player--1">
+            <div class="centralHolder">
+                <div class="newGame button"><h4>NEW GAME</h4></div>
+            </div>
+          <div class="titleHolder">
+              <h1 class="player1title">PLAYER 2</h1>
+              <div class="lives lives1">
+                <img id="P1L1" src="heart.png">
+                <img id="P1L2" src="heart.png">
+                <img id="P1L3" src="heart.png">
+                <img id="P1L4" src="heart.png">
+                <img id="P1L5" src="heart.png">
+            </div>
+              <br />
+              <h2 class="score--1">0</h2>
+            </div>
+            <div class="centralHolder">
+                <div class="resultHolder">
+                    <h1 class="winText hide"></h1>
+                    <div class="result result1 hide"><img id="dice1" src="dice-1.png"></div>
+                    <div class="result result2 hide"><img id="dice2" src="dice-2.png"></div>
+                    <div class="result result3 hide"><img id="dice3" src="dice-3.png"></div>
+                    <div class="result result4 hide"><img id="dice4" src="dice-4.png"></div>
+                </div>
+            </div>
+            <div class="centralHolder">
+                <div class="rollOption">
+                    <div class="rollOptionText">
+                        <h4>How Many Rolls?</h4>
+                    </div>
+                    <div class="rollOptionHolder">
+                        <div class="rollChoice rollChoice1 button">1</div>
+                        <div class="rollChoice rollChoice2 button">2</div>
+                        <div class="rollChoice rollChoice3 button">3</div>
+                        <div class="rollChoice rollChoice4 button">4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="centralHolder">
+                <div class="rulesButton button"><h4>RULES</h4></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay hide">
+        <div class="window">
+            <h3>How to play: </h3>
+            <p>1. Roll between 1-4 dice each turn. </p><br>
+            <p>2. If you roll a 1 on any dice, you lose a life and do NOT get to add your dice roll to your score.</p><br>
+            <p>3. Keep rolling in turns, the more dice you roll the greater the chance of scoring lots of points but also the more chance of rolling a 1.</p><br>
+            <p>4. When either player runs out of lives, all rolling stops. The player with lives left gets a bonus 50 points before the final judging!</p><br>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
